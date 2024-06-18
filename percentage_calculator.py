@@ -26,7 +26,7 @@ with col1:
 with col2:
     percent = st.number_input("Percent:", key="percent", min_value=0.1, on_change=percent_of_whole)
 with col3:
-    kilogram = st.number_input("Part:", key="part", on_change=whole_from_part)
+    kilogram = st.number_input("Part:", key="part", value=1, on_change=whole_from_part)
 
 st.latex(
     r"\text{whole} + \text{part} = %s"
