@@ -22,11 +22,11 @@ def whole_from_part():
 
 col1, col2, col3 = st.columns([2, 1, 2])
 with col1:
-    part = st.number_input("Whole:", key="whole", value=1000, on_change=percent_of_whole)
+    part = st.number_input("Whole:", key="whole", on_change=percent_of_whole)
 with col2:
     percent = st.number_input("Percent:", key="percent", min_value=0.1, on_change=percent_of_whole)
 with col3:
-    kilogram = st.number_input("Part:", key="part", value=1, on_change=whole_from_part)
+    kilogram = st.number_input("Part:", key="part", on_change=whole_from_part)
 
 st.latex(
     r"\text{whole} + \text{part} = %s"
